@@ -38,7 +38,7 @@ $capsule->bootEloquent();
 ~~~
 
 
-### adding db.php file to autolaod 
+### adding db.php file to composer.json file to autolaod and doing `composer dump-autoload` 
 
 ~~~php
 "autoload": {
@@ -47,7 +47,7 @@ $capsule->bootEloquent();
 ~~~
 
 
-### creating table using 
+### creating table using schema builder    
 
 ~~~php
 require 'vendor/autoload.php';
@@ -80,11 +80,14 @@ for 2 tables we have to make 2 models. By convention model name is singular form
 ~~~php
 
 # Department
+
 use Illuminate\Database\Eloquent\Model;
-class Subject extends Model {
+
+class Department extends Model {
   protected $guarded = [];
-  public function department () {
-    return $this->belongsTo(Department::class);
+
+  public function subjects () {
+    return $this->hasMany(Subject::class);
   }
 }
 
@@ -100,7 +103,7 @@ class Subject extends Model {
 
 ~~~
 
-### autloading models class using composer and dump-autoload command 
+### adding model folder to composer.json file to autolaod all models and doing `composer dump-autoload` 
 
 ~~~php
 "autoload": {
