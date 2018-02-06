@@ -1,0 +1,45 @@
+sql - structured query language
+programming language - js php 
+sql - structured query language - mysql, mariadb, oracle, post gre sql, sqllite
+
+# division
+----------------
+id | name
+----------------
+1 | chittagong
+----------------
+2 | dhaka
+----------------
+
+# city
+----------------
+id | name    | division_id
+----------------
+1 | chandpur | 1
+----------------
+2 | dhaka    | 2
+----------------
+3 | feni     | 1
+----------------
+
+# hospital
+--------------------------------
+id | name              | city_id
+--------------------------------
+1  | nz hospital       | 3
+--------------------------------
+2  | haider clinic     | 3
+--------------------------------
+3  | feni eye hospital | 3
+--------------------------------
+
+# doctor
+--------------------------------
+id | name    | hospital_id
+--------------------------------
+1 | nuruddin | 2
+--------------------------------
+2 | roven    | 2
+--------------------------------
+3 | Farhad   | 2
+--------------------------------
